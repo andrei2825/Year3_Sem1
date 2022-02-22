@@ -1,0 +1,7 @@
+M -> AFD
+a) trasez operatiile lui M pentru sirul W in W pasi
+b) verific daca exista un drum din starea initiala intr-o stare finala
+c) construiesc M' astfe incat L(M') = E* - L(M) si verific ca L(M') = 0/
+d) (E* - L(M2)) intersect L(M1)  = 0/
+
+e) bazati pe proprietatea multimilor

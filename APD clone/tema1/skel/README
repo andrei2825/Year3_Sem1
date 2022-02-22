@@ -1,0 +1,17 @@
+Porumb Andrei-Cornel
+336CA
+Tema 1 APD
+
+Pentru realizarea acestei teme, am ales sa paralelizez functia de sortare, 
+si anume am implementat un merge sort paralel in locul qsort-ului folosit
+in skeletul oferit.
+Pentru implementarea algoritmului de sortare, am creat o functie care 
+era data ca parametru la crearea fiecarui thread si care impartea
+workload-ul pentru fiecare thread.
+restul sortarii (functia merge_sort si functia merge) sunt functiile
+clasice din algoritmul secvential adaptate la nevoile exercitiului 
+curent, si anume sortarea dupa fitnes level.
+In urma paralelizarii, testele au rulat mult mai rapid, de exemplu 
+la rularea inputului 3 cu 5 generatii, in varianta secventiala obtineam
+12.898 secunde, iar in cea paralela 3.022 secunde, astfel avand o accelerare
+de peste 300%.

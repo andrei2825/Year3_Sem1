@@ -1,0 +1,8 @@
+
+f
+java:S2147*"DCombine this catch with the one at line 40, which has the same body.(†«”Ïüÿÿÿÿ8Ã÷•ÀÒ/
+{
+java:S2142("^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8ÿå”ÀÒ/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(òÃ¤¦
+[
+java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(±û™Ä

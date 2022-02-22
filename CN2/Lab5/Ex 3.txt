@@ -1,0 +1,22 @@
+rjmp main
+sum:
+push	rbp
+mov 	rbp, rsp
+mov	DWORD PTR [rbp - 4], edi
+mov 	DWORD PTR [rbp - 8], esi
+mov	edx, DWORD PTR [rbp - 4]
+mov	eax, DWORD PTR [rbp - 8]
+add	eax, edx
+pop 	rbp
+ret
+main:
+push    rbp
+mov     rbp, rsp
+sub     rsp, 16
+mov     esi, 2
+mov     edi, 10
+rcall    sum
+mov     DWORD PTR [rbp - 4], eax
+mov     eax, 0
+leave
+ret

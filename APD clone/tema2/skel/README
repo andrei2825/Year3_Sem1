@@ -1,0 +1,29 @@
+Tema 2 APD
+Porumb Andrei-Cornel
+336CA
+
+Pentru realizarea acestei teme am incercat sa implementez un model 
+map-reduce.
+
+Pentru a realiza maparea, am creat o lista de taskuri pentru fiecare
+worker, lista din care acestia iti aleg in functie de ID-ul lor un 
+numar echilibrat de taskuri.
+
+Un task consta in extragerea sectiunii de text din fisier aferenta taskului
+, determinarea daca aceasta se termina sau incepe in interiorul unui
+cuvant si calcularea unor date precum cel mai lung cuvant, 
+lungimea cuvintelor si numarul de aparitii.
+
+Pentru a calcula aceste date am parcurs lista de cuvinte primite si pentru 
+fiecare am calculat lungimea si nuamrul de aparitii.
+
+
+Pentru partea de reduce, din nou am creat o lista de taskuri din carefiecare 
+worker isi va alege un numar de taskuri.
+
+Acici, un task consta in calcularea a ce rezultate din mapare trebuie prelucrate
+si extragerea din aceste date a celui mai lung cuvant, lungimii adcestuia 
+si numarul lui de aparitii cat si calcularea rangului fiecarui fisier.
+
+In final, pentru a paraleliza programul am folosit o abordare clasica 
+in care nu au fost necesare bariere sau semafoare.

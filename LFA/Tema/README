@@ -1,0 +1,37 @@
+Nume: Porumb Andrei-Cornel
+Grupa: 336CA
+
+Temna LFA
+
+Pentru a alege taskul am folsoit un switch.
+Pentru a rezolva primul task am realizar cate un DFS pentru fiecare stare
+de pornire si dupa am verificat ce stari sunt accesibile (ce noduri au fost
+vizitate in graph)
+
+Pentru al doilea task, asemanator primului, am realizat un bfs dar pentru
+fiecare stare, nu doar cele initiale, si pentru fiecare calcul al DFS,
+verificam daca cel putin unul dintre nodurile (Starile) finale este
+vizitat. In acel caz afisam nodul curent si resetam arrayul de visited.
+
+Pentru al treilea task am combinat primele 2 taskuri, astfel am retinut
+rezultatele de la primul task intr-un array, si pe cele de la al doilea
+task in alt array, iar atunci cand un nod se regasea in ambele arrayuri,
+insemna ca este acceptat si il afisam.
+
+Pentru taskul de sincronizare, am verificat mai intai in care din cele
+4 subtaskuri posibile se afla programul.
+
+Pentru cazul general am retinut starile initiale intr-un array, dupa care
+cat timp nu ajungeam la sincronizare, dadeam tuturor starilor acelasi simbol
+pana cand toate starile ajungeau in acelasi punct, sau pana cand se terminau
+simbolurile.
+
+Rezolvarea este asemanatoare si pentru celelalte subtaskuri doar ca in cazul
+partial am plecat de la starile date ca stari initiale in loc sa plec din
+toate starile, iar pentru cel restrictionat si partial restrictionat
+la fiecare iterare verificam daca starile au ajuns in una dintre starile
+finale.
+
+Algoritmul pentru dfs este inspirat din cel gasit pe:
+https://www.programiz.com/dsa/graph-dfs
+

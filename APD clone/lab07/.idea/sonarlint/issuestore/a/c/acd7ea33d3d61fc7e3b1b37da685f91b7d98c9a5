@@ -1,0 +1,6 @@
+
+N	java:S1060"9Replace this use of System.out or System.err by a logger.(¯œ€§
+V	java:S125D"<This block of commented-out lines of code should be removed.(¥¿Äîþÿÿÿÿ
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ïÞÔéÔ/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•ñ´ßùÿÿÿÿ

@@ -1,0 +1,22 @@
+		rjmp main   	// sare la functia main
+	func1:
+		pop R18		// incarca R18 cu prima valoare de pe stiva
+		pop R19		// incarca R19 cu a doua valoare de pe stiva
+		pop R17		// incarca R17 cu a treia valoare de pe stiva
+		ldi R16, 1	// stocheaza in R16 valoarea 1
+		ldi R20, 0	// stocheaza in R20 valoarea 0
+	loop:
+		add R20, R17	// aduna valoarea din R20 cu cea din R17
+		sub R17, R16	// scade din valoarea din R17 pe cea din R16
+		brne loop	// banch if R17 < R16 (valorile)
+		push R19	// salveaza R19 pe stiva
+		push R18	// salveaza R18 pe stiva
+		ret
+	main:
+		ldi R20, 13	// stocheaza in R20 valoarea 13
+		sts 65, R20	// incarca la adresa 65 valoarea din R20
+		ldi R20, 39	// stocheaza in R20 valoarea 39
+		lds R20, 65	// incarca R20 cu valoarea de la adresa 65
+		push R20	// salveaza R20 pe stiva
+		rcall func1	// apeleaza functia func1
+		nop

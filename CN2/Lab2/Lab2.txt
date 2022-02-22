@@ -1,0 +1,6 @@
+0.1:INSTR_WIDTH
+0.2:8
+0.3:2*1024
+0.4:RESET, IF, ID, EX, MEM, WB 
+0.5:add, sub, and, or
+

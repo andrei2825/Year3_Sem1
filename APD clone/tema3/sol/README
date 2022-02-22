@@ -1,0 +1,61 @@
+Nume: Porumb Andrei-Cornel
+Gruma: 336CA
+
+Tema 3
+
+|--------------------------------Etapa 1----------------------------------------|
+| Am realizat setup-ul pentru 3 coordonatori asa cum este prezentat in enuntul  |
+| temei. Fiecare dintre acestia citeste din fisierul destinat lui workerii sai  |
+| apoi trimite acestora un send cu rankul coordonatorului.                      |
+|                                                                               |
+| Pentru a retine topologia, fiecare coordonator aloca un array si il populeaza |
+| cu -1 apoi adauga workerii lui in array.                                      |
+|                                                                               |
+| Un coordonator trimite celorlalti coordonatori array-ul acestuia de workeri si|
+| primeste de la ceilalti coordonatori array-urile cu workerii lor dupa care ii |
+| adauga in topologie                                                           |
+|                                                                               |
+| Cand termina aceste schimburi si au topologia completa, coordonatorii o       |
+| afiseaza si o trimit workerilor lor.                                          |
+|-------------------------------------------------------------------------------|
+|                                                                               |
+|--------------------------------Etapa 2----------------------------------------|
+| Pentru etapa 2, coordonatorul 0 a generat vectorul de N elemente apoi         |
+| calculeaza numarul de worker al fiecarui coordonator.                         |
+|                                                                               |
+| Tot coordonatorul 0 calculeaza numatul minim de taskuri pe care trebuie sa le |
+| realizeze fiecare worker apoi trimite acel numar de taskuri workerilor sai    |
+| si numarul de taskuri * numarul de workeri ai coordonatorului.                |
+|                                                                               |
+| Coordonatorul 2 va primi atat taskurile lui cat si taskurile pentru           |
+| coordonatorul 1 pe care i le va trimite si de la care va redirectiona         |
+| raspunsurile.                                                                 |
+|                                                                               |
+| Fiecare coordonator cand primeste taskurile le imparte la numarul de workeri  |
+| pe care ii are si trimite rezultatele primite catre coordonatorul 0 (in cazul |
+| coordonatorului 1, acesta va trimite prin intermediul coordonatorului 2).     |
+|                                                                               |
+| In cazul in care dupa impartirea taskurilor, mai                              |
+| raman < N - (numar complet worker * numar taskuri per worker), atunci         |
+| coordonatorul 0 verifica de cati coordonatori are nevoie.                     |
+|                                                                               |
+| In cazul in care workerii lui sunt suficienti, acesta trimite                 |
+| fiecarui worker pe rand cate un task, iar celor ramase si celorlati           |
+| coordonatori le trimite un semnal care sa le spuna ca nu are nevoie de ei     |
+|                                                                               |
+| In cazul in care coordonatorul0 decide ca are nevoie si de workerii           |
+| coordonatorului 1, acesta pe langa a trimite taskurile workeilor sai,         |
+| trimite un semnal coordonatorului 2 pentru a-l anunta ca urmatoarele          |
+| senduri sunt destinate coordonatorului 1, apoi ii trimite taskurile.          |
+| Tot coordonatorului 2 ii va trimite un semnal pentr a-la nunta ca nu este     |
+| nevoie de workerii lui.                                                       |
+|                                                                               |
+| In cazul in cae este nevoie si de workerii coordonatorului 2,                 |
+| coordonatoruil 0 trimite tuturor coordonatorilor un semnal care sa ii         |
+| atentioneze ca are nevoie de ei, si pe langa acest semnal. va trimite         |
+| coordonatorului 2 un semnal pentru a-l atentiona ca trebuie sa trimita        |
+| o parte din valorile primite catre coordonatoriul 1                           ||                                                                               |
+| Dupa ce coordonatorul 0 primeste inapoi toate valorile, acesta                |
+| asteapta o secunda si pentru ca toate procesele sa termine                    |
+| afisarile de transfer (MM x,y) apoi afiseaza rezultatul                       |
+|-------------------------------------------------------------------------------|
